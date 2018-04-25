@@ -90,7 +90,7 @@ public class BinaryTree {
 	
 	/**
 	 * Método que inserta un nuevo valor a la estructura.
-	 * Complejidad: O(log(n).
+	 * Complejidad: O(n).
 	 * @param e
 	 */
 	public void insert (int e){	
@@ -99,7 +99,7 @@ public class BinaryTree {
 	
 	/**
 	 * Inserta el nodo en el Arbol de forma recursiva. Si esta repetido no lo inserta.
-	 * Complejidad: O(log(n)).
+	 * Complejidad: O(n) ya que el árbol no esta balanceado.
 	 * @param raiz
 	 * @param nNodo
 	 */
@@ -226,7 +226,7 @@ public class BinaryTree {
     
     /**
      * Método que devuelve el mayor elemento del árbol.
-     * Complejidad: O(log(n)).
+     * Complejidad: O(h) donde h es la altura del árbol.
      * @return El elemento de mayor valor.
      */
     public int getMaxElement(){
@@ -235,7 +235,7 @@ public class BinaryTree {
     
     /**
 	 * Busca el valor del nodo de mas a la derecha en el cual se encuentra el máximo valor del árbol. 
-	 * Complejidad: O(log(n)).
+	 * Complejidad: O(h) donde h es la altura del árbol.
 	 * @param n
 	 * @return el máximo del árbol.
 	 */
