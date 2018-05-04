@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+import java.util.Arrays;
+
 
 /**
  * @author
@@ -11,7 +12,7 @@ public class Libro {
 	private String titulo;
 	private String autor;
 	private int cantPag;
-	private ArrayList<String> generos;
+	private String[] generos;
 	
 	/**
 	 * @param titulo
@@ -19,7 +20,7 @@ public class Libro {
 	 * @param cantPag
 	 * @param generos
 	 */
-	public Libro(String titulo, String autor, int cantPag, ArrayList<String> generos) {
+	public Libro(String titulo, String autor, int cantPag, String[] generos) {
 		this.titulo = titulo;
 		this.autor = autor;
 		this.cantPag = cantPag;
@@ -71,15 +72,26 @@ public class Libro {
 	/**
 	 * @return the generos
 	 */
-	public ArrayList<String> getGeneros() {
+	public String[] getGeneros() {
 		return generos;
 	}
 
 	/**
 	 * @param generos the generos to set
 	 */
-	public void setGeneros(ArrayList<String> generos) {
+	public void addGeneros(String[] generos) {
 		this.generos = generos;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Libro [titulo=" + titulo + ", autor=" + autor + ", cantPag="
+				+ cantPag + ", generos=" + Arrays.toString(generos)
+				+ ", getTitulo()=" + getTitulo() + ", getAutor()=" + getAutor()
+				+ ", getCantPag()=" + getCantPag() + "]";
 	}
 	
 }
